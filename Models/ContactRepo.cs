@@ -1,6 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -17,12 +19,16 @@ namespace DependencyInjection.Models
         public async Task<bool> Create(Contact contact)
         {
             await AuditLogs.WriteLog($"Create({JsonConvert.SerializeObject(contact)})");
+            List<SqlParameter> b = new List<SqlParameter>();
+            b.Add(new SqlParameter() { ParameterName = "ContactId", DbType = DbType.Int64, Direction = ParameterDirection.Input, Value = long.Parse("1") });
+            b.Add(new SqlParameter() { ParameterName = "Mobile", SqlDbType = SqlDbType.NVarChar, Size=20, Direction = ParameterDirection.Output });//, Value="039746644"
+            await _db.ExcuteNonQuery(CommandType.Text, @"Select @Mobile = Mobile From Contact where Id=@ContactId", b.ToArray());
             return true;
         }
 
         public async Task<bool> Delete(Contact contact)
         {
-            await AuditLogs.WriteLog($"Delete({JsonConvert.SerializeObject(contact)})");
+            await AuditLogs.WriteLog($"Delete({JsonConvert.SerializeObject(contact)})");            
             return true;
         }
 

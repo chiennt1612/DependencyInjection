@@ -76,6 +76,7 @@ C:\Users\Administrator\source\repos\DependencyInjection\bin\Microsoft.AspNet.Web
 C:\Users\Administrator\source\repos\DependencyInjection\bin\Unity.Abstractions.dll
 C:\Users\Administrator\source\repos\DependencyInjection\bin\Unity.Container.dll
 C:\Users\Administrator\source\repos\DependencyInjection\bin\Microsoft.AspNet.WebFormsDependencyInjection.Unity.xml
+D:\GitHub\DependencyInjection\obj\Debug\DependencyInjection.csproj.CoreCompileInputs.cache
 D:\GitHub\DependencyInjection\bin\DependencyInjection.dll.config
 D:\GitHub\DependencyInjection\bin\DependencyInjection.dll
 D:\GitHub\DependencyInjection\bin\DependencyInjection.pdb
@@ -149,8 +150,7 @@ D:\GitHub\DependencyInjection\bin\Newtonsoft.Json.xml
 D:\GitHub\DependencyInjection\bin\Antlr3.Runtime.pdb
 D:\GitHub\DependencyInjection\bin\Microsoft.AspNet.FriendlyUrls.xml
 D:\GitHub\DependencyInjection\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\GitHub\DependencyInjection\obj\Debug\DependencyInjection.csprojAssemblyReference.cache
-D:\GitHub\DependencyInjection\obj\Debug\DependencyInjection.csproj.CoreCompileInputs.cache
 D:\GitHub\DependencyInjection\obj\Debug\DependencyInjection.csproj.CopyComplete
 D:\GitHub\DependencyInjection\obj\Debug\DependencyInjection.dll
 D:\GitHub\DependencyInjection\obj\Debug\DependencyInjection.pdb
+D:\GitHub\DependencyInjection\obj\Debug\DependencyInjection.csprojAssemblyReference.cache
