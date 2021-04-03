@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DependencyInjection.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ namespace DependencyInjection
 {
     public partial class About : Page
     {
+        private IContactRepo _contact;
         protected async void Page_Load(object sender, EventArgs e)
         {
             TextBox1.Text = await FakeTask();
@@ -29,16 +31,13 @@ namespace DependencyInjection
             }           
         }
 
-        public About()
+        public About(IContactRepo _contact)
         {
-
-        }
-        ~About()
-        {
-
+            this._contact = _contact;
         }
         public override void Dispose()
         {
+            _contact.Dispose();
             base.Dispose();
         }
         protected async void Button1_Click(object sender, EventArgs e)
