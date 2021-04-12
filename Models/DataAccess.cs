@@ -47,10 +47,11 @@ namespace DependencyInjection.Models
             DataSet ds = new DataSet();
             Conm.CommandType = _CommandType;
             Conm.CommandText = Sql;
-            for (var i = 0; i < Param.Length; i++)
-            {
-                Conm.Parameters.Add(Param[i]);
-            }
+            Conm.Parameters.AddRange(Param);
+            //for (var i = 0; i < Param.Length; i++)
+            //{
+            //    Conm.Parameters.Add(Param[i]);
+            //}
             //Param.Select(Item => Conm.Parameters.Add(Item));
             using (SqlDataAdapter da = new SqlDataAdapter())
             {
@@ -66,10 +67,11 @@ namespace DependencyInjection.Models
             {
                 Conm.CommandType = _CommandType;
                 Conm.CommandText = Sql;
-                for(var i = 0; i<Param.Length; i++)
-                {
-                    Conm.Parameters.Add(Param[i]);
-                }
+                Conm.Parameters.AddRange(Param);
+                //for(var i = 0; i<Param.Length; i++)
+                //{
+                //    Conm.Parameters.Add(Param[i]);
+                //}
                 //Param.Select(Item => Conm.Parameters.Add(Item));
                 Conm.Transaction = tran;
                 try
